@@ -1,3 +1,4 @@
+#main.py
 from loginSystem import System, user_login
 from doctor import Doctor
 from patient import Patient_Management
@@ -7,7 +8,6 @@ def main():
     pm.patient_database("src/patients.txt")
     
     loginSys = System()
-    
     user = user_login(loginSys)
     
     if user:
@@ -15,7 +15,7 @@ def main():
             doctor = Doctor(user.username, user.role, pm)
             doctor.doctorMenu()  
         else:
-            print(f"Welcome, {user.username}")
+            print(f"\nWelcome, {user.username}")
     else:
         print("Invalid username or password")
 

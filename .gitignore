@@ -1,5 +1,8 @@
 # Ignore users.txt file
 /src/users.txt
 
-# Ignore patients.txt
+# Ignore patients.txt file
 /src/patients.txt
+
+# Ignore hashing.py file
+hashing.py
