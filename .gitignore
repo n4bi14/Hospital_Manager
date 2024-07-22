@@ -1,0 +1,5 @@
+# Ignore users.txt file
+/src/users.txt
+
+# Ignore patients.txt
+/src/patients.txt
