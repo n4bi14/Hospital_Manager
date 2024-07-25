@@ -17,7 +17,7 @@ def main():
         else:
             print(f"\nWelcome, {user.username}")
     else:
-        print("Invalid username or password")
+        print("")
 
 if __name__ == "__main__":
     main()

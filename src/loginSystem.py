@@ -60,10 +60,17 @@ def user_login(system):
         return system.register_user()
     
     elif user_request == "2":
-        username = input('Username: ')
-        password = input('Password: ')
-        user = system.login(username, password)
-        return user
+        max_attempts = 3
+        user_attempts = 0
+        while user_attempts < max_attempts:
+            username = input('Username: ')
+            password = input('Password: ')
+            user = system.login(username, password)
+            if user:
+                return user
+            user_attempts += 1
+            if user_attempts >= max_attempts:
+                print("Too many attempts. Please try again later.")
     else:
         print("Invalid option. Please choose 1 or 2.")
         return None 
